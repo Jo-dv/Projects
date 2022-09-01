@@ -75,10 +75,10 @@ class algorithms:
                 evaluation = evaluate(fit)
                 time.sleep(0.005)
                 os.system('cls')
-                print(f"================================run{x + 1}===================================")
-                print(f"================================gen{i}===================================")
-                print(f"Fitness: {fit.mean(): .17f} \tEvaluation: {evaluation.mean(): .17f}")
-                print("=========================================================================")
+                print("=" * 32 + f"run{x + 1}" + "=" * (38-len(str(x+1))))
+                print("=" * 32 + f"gen{i}" + "=" * (38-len(str(i))))
+                print(f"Fitness: {fit.mean(): .17f} \t\tEvaluation: {evaluation.mean(): .17f}")
+                print("=" * 73)
                 print(population.mean(axis=0))
 
                 for j in range(0, popsize, 2):
